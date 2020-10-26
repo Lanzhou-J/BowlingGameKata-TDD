@@ -16,18 +16,23 @@ namespace BowlingGameKataTest
         [Fact]
         public void TestGutterGame()
         {
-            g = new Game();
-            for (int i = 0; i < 20; i++)
-            {
-                g.Roll(0);
-            }
+            int n = 20;
+            int pins = 0;
+            RollMany(n, pins);
             Assert.Equal(0, g.Score());
         }
-        
+
+        private void RollMany(int n, int pins)
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                g.Roll(pins);
+            }
+        }
+
         [Fact]
         public void TestAllOnes()
         {
-            g = new Game();
             for (int i = 0; i < 20; i++)
             {
                 g.Roll(1);
