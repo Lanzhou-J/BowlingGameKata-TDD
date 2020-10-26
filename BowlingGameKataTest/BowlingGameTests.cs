@@ -6,10 +6,17 @@ namespace BowlingGameKataTest
 {
     public class BowlingGameTests
     {
+
+        private Game g;
+        public BowlingGameTests()
+        {
+            g = new Game();
+        }
+
         [Fact]
         public void TestGutterGame()
         {
-            Game g = new Game();
+            g = new Game();
             for (int i = 0; i < 20; i++)
             {
                 g.roll(0);
@@ -20,7 +27,7 @@ namespace BowlingGameKataTest
         [Fact]
         public void TestAllOnes()
         {
-            Game g = new Game();
+            g = new Game();
             for (int i = 0; i < 20; i++)
             {
                 g.roll(1);
