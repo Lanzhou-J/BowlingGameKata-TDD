@@ -38,11 +38,16 @@ namespace BowlingGameKataTest
         [Fact]
         public void TestOneSpare()
         {
-            g.Roll(5);
-            g.Roll(5);
+            RollSpare();
             g.Roll(3);
             RollMany(17, 0);
             Assert.Equal(16, g.Score());
+        }
+
+        private void RollSpare()
+        {
+            g.Roll(5);
+            g.Roll(5);
         }
     }
 }
