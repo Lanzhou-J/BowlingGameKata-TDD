@@ -16,7 +16,7 @@ namespace BowlingGameKata
              int frameIndex = 0;
              for (int frame = 0; frame < 10; frame++)
              {
-                 if (_rolls[frameIndex] == 10)
+                 if (IsStrike(frameIndex))
                  {
                      score += 10 + _rolls[frameIndex + 1] + _rolls[frameIndex + 2];
                      frameIndex++;
@@ -33,6 +33,11 @@ namespace BowlingGameKata
                  }
              }
              return score;
+        }
+
+        private bool IsStrike(int frameIndex)
+        {
+            return _rolls[frameIndex] == 10;
         }
 
         private bool IsSpare(int frameIndex)
