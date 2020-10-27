@@ -35,14 +35,14 @@ namespace BowlingGameKataTest
             Assert.Equal(20, g.Score());
         }
         
-        // [Fact]
-        // public void TestOneSpare()
-        // {
-        //     g.Roll(5);
-        //     g.Roll(5);
-        //     g.Roll(3);
-        //     RollMany(17, 0);
-        //     Assert.Equal(16, g.Score());
-        // }
+        [Fact]
+        public void TestOneSpare()
+        {
+            g.Roll(5);
+            g.Roll(5);
+            g.Roll(3);
+            RollMany(17, 0);
+            Assert.Equal(16, g.Score());
+        }
     }
 }
