@@ -43,6 +43,16 @@ namespace BowlingGameKataTest
             RollMany(17, 0);
             Assert.Equal(16, g.Score());
         }
+        
+        [Fact]
+        public void TestOneStrike()
+        {
+            g.Roll(10);
+            g.Roll(3);
+            g.Roll(4);
+            RollMany(16, 0);
+            Assert.Equal(24, g.Score());
+        }
 
         private void RollSpare()
         {
